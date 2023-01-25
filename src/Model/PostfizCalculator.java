@@ -6,7 +6,11 @@ public class PostfizCalculator implements IPostfixCalculator{
 
     @Override
     public boolean isOneItem(IStack operandos) {
-       return false;
+        if (operandos.count()==1) {
+            return  true;
+        }
+        return false;
+
     }
 
     @Override
@@ -41,6 +45,23 @@ public class PostfizCalculator implements IPostfixCalculator{
 
     @Override
     public ArrayList<String> getItems(String _expresion) {
-        return null;
+        ArrayList<String> items = new ArrayList<String>();
+        StringBuilder item = new StringBuilder();
+        for (int i = 0; i < _expresion.length(); i++) {
+            char c = _expresion.charAt(i);
+            if (Character.isDigit(c) || c == '.') {
+                item.append(c);
+            } else {
+                if (item.length() > 0) {
+                    items.add(item.toString());
+                    item.setLength(0);
+                }
+                items.add(String.valueOf(c));
+            }
+        }
+        if (item.length() > 0) {
+            items.add(item.toString());
+        }
+        return items;
     }
 }
