@@ -18,13 +18,14 @@ public class ReadFile {
                 data =data + myReader.nextLine();
 
             }
-            return data;
             myReader.close();
+            return data;
+
         } catch (FileNotFoundException e) {
             System.out.println("An error occurred.");
             e.printStackTrace();
         }
 
-
+    return "";
     }
 }
