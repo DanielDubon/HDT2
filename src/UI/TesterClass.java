@@ -1,6 +1,11 @@
+package UI;
+
+import Controller.ReadFile;
 import Model.PostfizCalculator;
 
 import java.util.Stack;
+
+import static Controller.ReadFile.read;
 
 /**
  * THIS IS A TEST:)
@@ -13,7 +18,8 @@ public class TesterClass {
 
         PostfizCalculator calculator = new PostfizCalculator();
 
-        String postFixString = "4 5 * 2 + ";
+        String postFixString = read();
+        System.out.println(postFixString);
 
         String[] instructions = postFixString.split(" ");
 
