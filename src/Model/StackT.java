@@ -56,6 +56,7 @@ public class StackT<T> implements IStack{
             return null;
         } else {
             return top.getValue();
+
         }
     }
 }

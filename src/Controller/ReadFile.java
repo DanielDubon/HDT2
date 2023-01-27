@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class ReadFile {
     public static String read(){
-        System.out.println("Ingrese la ruta del archivo ej C:\\ejemplos\\example1.txt");
+        System.out.println("\"C:\\Users\\bianc\\OneDrive\\Documents\\ejem.txt\"");
         Scanner in = new Scanner(System.in);
         String fpath = in.nextLine();
 
