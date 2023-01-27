@@ -6,9 +6,12 @@ import java.util.Scanner;
 
 public class ReadFile {
     public static String read(){
-        System.out.println("\"C:\\Users\\bianc\\OneDrive\\Documents\\ejem.txt\"");
+        System.out.println("Ingresar la ruta del archivo abajo\n========================================\n");
         Scanner in = new Scanner(System.in);
         String fpath = in.nextLine();
+        //User must regist the complete path of txt in order make it work
+        //Sample: D:\JOSUE\UVG\Clases Tercer Semestre\DSA\HT2 - Postfix\HDT2\src\ejem.txt
+
 
         try {
             File myObj = new File(fpath);
@@ -19,6 +22,7 @@ public class ReadFile {
 
             }
             myReader.close();
+            System.out.println(data);
             return data;
 
         } catch (FileNotFoundException e) {

@@ -13,9 +13,12 @@ import static Controller.ReadFile.read;
 public class Main {
     public static boolean menu = true;
     public static void main(String[] args) throws Exception {
+
         PostfizCalculator calculator = new PostfizCalculator();
-        StackT<Integer> operandos = new StackT<Integer>();
+        StackT<Integer> operandos = new StackT<Integer>(); //Implement handmade stack pending
         Scanner scan = new Scanner(System.in);
+
+        //Menu settings
         boolean exit = false;
         System.out.println(" -----MENU----");
         System.out.println("1.. Calcular resultado de expresión-->postfix");
@@ -26,8 +29,18 @@ public class Main {
 
         switch (opcion) {
             case 1:
+
                 String expresion = ReadFile.read();
+
+                System.out.println("GETTING POST FIX FORMAT");
+                System.out.println(expresion);
+                System.out.println("=======================");
+
                 ArrayList<String> items = calculator.getItems(expresion);
+                System.out.println(items.size());
+                for (String item : items) {
+                    System.out.println(item);
+                }
                 for (String item : items) {
                     if (calculator.isOperator(item)) {
                         int b = (int) operandos.pull();
