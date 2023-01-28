@@ -2,6 +2,9 @@ package Model;
 
 import java.util.ArrayList;
 
+/**
+ * Class contains all method from a calculator
+ */
 public class PostfizCalculator implements IPostfixCalculator{
 
     @Override
@@ -13,26 +16,56 @@ public class PostfizCalculator implements IPostfixCalculator{
 
     }
 
+    /**
+     * Addition method
+     * @param a
+     * @param b
+     * @return
+     */
+
     @Override
     public int suma(int a, int b) {
         return a+b;
     }
 
+    /**
+     * Subtraction method
+     * @param a
+     * @param b
+     * @return
+     */
     @Override
     public int resta(int a, int b) {
         return a-b;
     }
 
+    /**
+     * Multiplication method
+     * @param a
+     * @param b
+     * @return
+     */
     @Override
     public int multiplicacion(int a, int b) {
         return a*b;
     }
 
+    /**
+     * Divition method
+     * @param a
+     * @param b
+     * @return
+     */
     @Override
     public int division(int a, int b) {
         return a/b;
     }
 
+    /**
+     * Identifies if the String given corresponds to an operator
+     * @param item
+     * @return
+     */
     @Override
     public boolean isOperator(String item) {
         if (item.equals("*")||item.equals("+")||item.equals("-")||item.equals("/")){

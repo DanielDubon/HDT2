@@ -1,21 +1,20 @@
 package UI;
-
 import Controller.ReadFile;
 import Model.PostfizCalculator;
 import Model.StackT;
-
 import java.util.ArrayList;
 import java.util.Scanner;
-import java.util.Stack;
 
-import static Controller.ReadFile.read;
-
+/**
+ * Class contains main method
+ */
 public class Main {
     public static boolean menu = true;
     public static void main(String[] args) throws Exception {
 
+        //Objects
         PostfizCalculator calculator = new PostfizCalculator();
-        StackT<Integer> operandos = new StackT<Integer>(); //Implement handmade stack pending
+        StackT<Integer> operandos = new StackT<Integer>(); //Stack handmade
         Scanner scan = new Scanner(System.in);
 
         //Menu settings
@@ -27,6 +26,7 @@ public class Main {
         System.out.print("Seleccione una opción: ");
         int opcion = scan.nextInt();
 
+        //Menu
         switch (opcion) {
             case 1:
 
@@ -42,14 +42,16 @@ public class Main {
                     System.out.println(item);
                 }
                 for (String item : items) {
+
                     if (calculator.isOperator(item)) {
+
                         int b = (int) operandos.pull();
                         int a = (int) operandos.pull();
+
                         int resultado = 0;
                         switch (item) {
                             case "+":
                                 resultado = calculator.suma(a, b);
-
                                 break;
                             case "-":
                                 resultado = calculator.resta(a, b);

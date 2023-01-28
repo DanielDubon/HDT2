@@ -1,8 +1,10 @@
 package Model;
 
 
-
-
+/**
+ * Stack handmade with T generic.
+ * @param <T>
+ */
 public class StackT<T> implements IStack{
 
     private int size;
