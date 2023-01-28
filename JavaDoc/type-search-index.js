@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"Model","l":"IPostfixCalculator"},{"p":"Model","l":"IStack"},{"p":"UI","l":"Main"},{"p":"Model","l":"Node"},{"p":"Model","l":"PostfizCalculator"},{"p":"Tests","l":"PostfizCalculatorTest"},{"p":"Controller","l":"ReadFile"},{"p":"Model","l":"StackT"}];updateSearchResults();
