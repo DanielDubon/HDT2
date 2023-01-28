@@ -1,8 +1,10 @@
 package Model;
 
 
-
-
+/**
+ * Stack handmade with T generic.
+ * @param <T>
+ */
 public class StackT<T> implements IStack{
 
     private int size;
@@ -56,6 +58,7 @@ public class StackT<T> implements IStack{
             return null;
         } else {
             return top.getValue();
+
         }
     }
 }
